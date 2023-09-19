@@ -15,7 +15,8 @@ def view_all_customers(request):
     customer = models.Customer.objects.select_related('account').all()
     context = {
         'queryset': customer,
-        'user': reverse('core:customers')
+        'user': reverse('core:customers'),
+        'home': reverse('core:home')
     }
     return render(request, 'customers.html', context)
 
@@ -37,7 +38,12 @@ def transfer(request):
 def transfer_details(request, id):
     form = TransactionForm(id)
     context = {
-        'form': form
+        'form': form,
+        'details': (
+            reverse('core:customers')
+            + id
+        ),
+        'home': reverse('core:home')
     }
 
     if request.method == 'POST':
