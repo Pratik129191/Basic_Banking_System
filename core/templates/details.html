@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neem</title>
+{#    <link rel="icon" href="https://raw.githubusercontent.com/Pratik129191/HTML/main/images/Logo.jpg">#}
+    <link rel="icon" href="https://internship.thesparksfoundation.info/assests/img/logo.png">
+    <style>
+        body {
+            background-color: #007bff;
+        }
+        th {
+            font-size: 28px;
+            color: #ff752f;
+        }
+        i {
+
+        }
+    </style>
+</head>
+<body>
+<h1 style="font-family: 'Adobe Devanagari',cursive; font-size: 60px; color: #ffffff;" align="center">Details of {{ user }}</h1>
+<table border="3" bordercolor="#191970"  cellpadding="9" align="center" style="font-size: 28px; color: black; font-family: 'Adobe Devanagari',cursive;" bgcolor="white" width="750">
+    <tr>
+        <th>Email</th>
+        <td>
+            <i>{{ user.email }}</i>
+        </td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>
+            <i>{{ user.address }}</i>
+        </td>
+    </tr>
+    <tr>
+        <th>Mobile</th>
+        <td>
+            <i>{{ user.phone }}</i>
+        </td>
+    </tr>
+    <tr>
+        <th>Account Type</th>
+        <td>
+            <i>{{ user.account.get_type }} Account</i>
+        </td>
+    </tr>
+    <tr>
+        <th>Account Number</th>
+        <td>
+            <i>{{ user.account.number }}</i>
+        </td>
+    </tr>
+    <tr>
+        <th>Current Balance</th>
+        <td>
+            <i>{{ user.account.balance }} Rs.</i>
+        </td>
+    </tr>
+</table>
+<br>
+<p align="center">
+        <a style="text-decoration: none" href={{ transfer }}{{ user.id }}>
+            <button style=" height: 40px; color: black;
+             width: 250px ;background-color: antiquewhite; border: groove; border-radius: 15px; border-style: hidden;
+             font-family: Arial, sans-serif; font-size: 22px">
+                <b>Transfer Amount</b>
+{#                <input type="hidden" value="Proceed">#}
+            </button>
+        </a>
+    </p>
+</body>
+</html>

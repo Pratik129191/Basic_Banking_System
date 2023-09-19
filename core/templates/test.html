@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown List Example</title>
+</head>
+<body>
+
+<h1>Select a fruit:</h1>
+
+<select id="fruitSelector">
+  <option value="apple">Apple</option>
+  <option value="banana">Banana</option>
+  <option value="orange">Orange</option>
+  <option value="grape">Grape</option>
+</select>
+
+<!-- JavaScript to handle the selection -->
+<script>
+  const fruitSelector = document.getElementById('fruitSelector');
+
+  fruitSelector.addEventListener('change', function() {
+    const selectedFruit = fruitSelector.value;
+    alert('You selected: ' + selectedFruit);
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+<div class="pas-dropdown" name="215496" style="padding: 10px 25px;">
+    <label class="pas-dropdown-label" for="215496" style="text-align: left;"><span style="color:#15352E;font-family:Helvetica, Arial, sans-serif;font-size:16px;">pratik</span>
+</label>
+    <select class="pas-dropdown-input" data-field="1" id="215496" data-type="string" style="background-color: #ffffff; border: 1px solid #555555; background-image: url(&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='%23000000' stroke='%23000000' d='M6 8l-1 1l5 5l5-5l-1-1l-4 4l-4-4z'/></svg>&quot;);">
+        <option class="dropdown-option" value="Option 1">Option 1</option>
+        <option class="dropdown-option" value="Option 2">Option 2</option>
+        <option class="dropdown-option" value="Option 3">Option 3</option>
+    </select>
+</div>
