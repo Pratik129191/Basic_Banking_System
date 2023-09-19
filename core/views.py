@@ -12,15 +12,6 @@ def home(request):
 
 
 def view_all_customers(request):
-    """
-    <tr>
-        <td align="center"> Purnendu Sahoo </td>
-        <td align="center"><img src="https://github.com/Pratik129191/HTML/blob/main/images/techer%20&%20friend/ps_sir1.jpg?raw=true" width="110"></td>
-        <td align="center"><a href="https://www.facebook.com/purnendu.sahoo.79"> Facebook Profile </a></td>
-    </tr>
-    :param request:
-    :return: models.Customer.objects.select_related('account').all()
-    """
     customer = models.Customer.objects.select_related('account').all()
     context = {
         'queryset': customer,
@@ -32,7 +23,8 @@ def view_all_customers(request):
 def customer_details(request, id):
     context = {
         'user': models.Customer.objects.select_related('account').get(pk=id),
-        'transfer': reverse('core:transfer')
+        'transfer': reverse('core:transfer'),
+        'customers': reverse('core:customers')
     }
 
     return render(request, 'details.html', context)
